@@ -1,0 +1,18 @@
+
+
+<h3>Selected Stars</h3>
+
+<input type="text" name="" class="form-control" ng-model="cs.search" class="form-control">
+
+<div class="row">
+
+
+
+<div masonry>
+	<div class="masonry-brick col-sm-4 col-md-3" ng-repeat="(key, star) in cs.stars | orderBy: '-' | filter:cs.search track by $index" >
+		<jf-star class="star" star="star"></jf-star> 
+	</div>
+	
+</div>
+
+</div>

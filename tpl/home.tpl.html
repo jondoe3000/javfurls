@@ -1,0 +1,12 @@
+
+<textarea ng-model="ho.paste" name="txtInput" id="" cols="30" rows="10" class="form-control" placeholder="Paste JavFUrls" nm-focus-on=""></textarea>
+<br/>
+<button class="btn btn-primary" ng-click="ho.cargar()">Cargar</button>
+
+<br/>
+
+<div>
+    <img width="400px" src="img/load.gif" ng-show="ho.loading">
+    <textarea class='form-control' cols='30' rows='10' ng-hide="ho.loading" >{{ho.urls}}</textarea>
+</div>
+<div id="res" ></div>

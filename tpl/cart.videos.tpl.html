@@ -1,0 +1,28 @@
+
+
+
+<h3>Selected Videos</h3>
+
+<input type="text" name="" class="form-control" ng-model="cv.search" class="form-control">
+<br/>
+<div class="row">
+	<div class="col-xs-2"></div>
+	<div class="col-xs-4">
+		<button class="btn btn-primary btn-block" ui-sref="main">Get URLs</button>
+	</div>
+	<div class="col-xs-4">
+		<button ng-click="cv.unSelectAll()" class="btn btn-default btn-block">Unselect All</button>
+	</div>
+	<div class="col-xs-2"></div>
+</div>
+<br/>
+<!-- <center ng-show="ca.loading">
+	<img src="http://www.arabianbusiness.com/skins/ab.main/gfx/loading_spinner.gif">
+</center> -->
+<div class="row">
+
+<!-- <jf-star ng-repeat="star in ca.stars | orderBy: '-' | filter:ca.search track by $index" star="star"></jf-star> -->
+
+<video-comp ng-repeat="video in cv.videos | orderBy:'-' | filter: cv.search" video="video"></video-comp>
+
+</div>

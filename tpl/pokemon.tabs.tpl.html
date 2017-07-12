@@ -1,0 +1,87 @@
+<div class="col-md-6">
+    <ul class="nav nav-tabs nav-justified">
+        <li ng-class="{'active':pkmCtrl.tab=='pokedex' }"><a ng-click="pkmCtrl.tab='pokedex'">Pokédex</a></li>
+        <li ng-class="{active:pkmCtrl.tab=='stats' }"><a ng-click="pkmCtrl.tab='stats'">Stats</a></li>
+        <li ng-class="{active:pkmCtrl.tab=='evolution' }"><a ng-click="pkmCtrl.tab='evolution'">Evolution</a></li>
+    </ul>
+
+
+    <div class="pkmCtrl.tab-content" ng-init="tab='pokedex'">
+        <!-- Pokedex -->
+        <div ng-if="pkmCtrl.tab=='pokedex'" class="animated fadeIn">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Type</strong>
+                    <span class="pull-right">
+                      <span class="label type type-{{type | lowercase}}" ng-repeat="type in pkmCtrl.pokemon.type">
+                        {{type}}
+                      </span>
+                    </span>
+                </li>
+                <li class="list-group-item">
+                    <strong>Height</strong>
+                    <span class="pull-right">{{pkmCtrl.pokemon.height}}</span>
+                </li>
+                <li class="list-group-item">
+                    <strong>Weight</strong>
+                    <span class="pull-right">{{pkmCtrl.pokemon.weight}}</span>
+                </li>
+                <li class="list-group-item">
+                    <strong>Abilities</strong>
+                    <ul>
+                        <li ng-repeat="ability in pkmCtrl.pokemon.abilities">
+                            {{ability}}
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- Stats -->
+        <div ng-if="pkmCtrl.tab=='stats'" class="animated fadeIn">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>HP</strong>
+                    <span class="badge">{{pkmCtrl.pokemon.stats.hp}}</span>
+                </li>
+                <li class="list-group-item">
+                    <strong>Attack</strong>
+                    <span class="badge">{{pkmCtrl.pokemon.stats.attack}}</span>
+                </li>
+                <li class="list-group-item">
+                    <strong>Defense</strong>
+                    <span class="badge">{{pkmCtrl.pokemon.stats.defense}}</span>
+                </li>
+                <li class="list-group-item">
+                    <strong>Special Attack</strong>
+                    <span class="badge">{{pkmCtrl.pokemon.stats['sp.atk']}}</span>
+                </li>
+                <li class="list-group-item">
+                    <strong>Special Defense</strong>
+                    <span class="badge">{{pkmCtrl.pokemon.stats['sp.def']}}</span>
+                </li>
+                <li class="list-group-item">
+                    <strong>Speed</strong>
+                    <span class="badge">{{pkmCtrl.pokemon.stats.speed}}</span>
+                </li>
+                <li class="list-group-item">
+                    <strong>Total</strong>
+                    <span class="badge">{{pkmCtrl.pokemon.stats.total}}</span>
+                </li>
+            </ul>
+        </div>
+        <!-- Evolution -->
+        <div ng-if="pkmCtrl.tab=='evolution'" class="animated fadeIn">
+            <div class="text-center" ng-repeat="pokemon in pkmCtrl.pokemon.evolution">
+                <a href="#">
+                    <img ng-src="img/pokemons/{{pokemon | lowercase}}.jpg" width="160">
+                    <p>
+                        <strong>{{pokemon}}</strong>
+                    </p>
+                </a>
+                <span ng-if="!$last" class="glyphicon glyphicon-arrow-down"></span>
+            </div>
+        </div>
+    </div>
+
+
+</div>

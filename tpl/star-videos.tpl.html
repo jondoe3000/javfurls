@@ -1,0 +1,23 @@
+<h3>{{sv.star.name}}</h3>
+<select ng-model="sv.type">
+	<option value="">Last</option>
+	<option value="/hot">Hot</option>
+</select>
+<input type="number" name="" ng-model="sv.number" min="1" >
+
+<button ng-click="sv.cargar()" class="btn btn-primary">Cargar</button>
+<loading ng-show="sv.loading"></loading>
+
+<!-- <p ng-show="sv.videos.length">{{sv.videos.length}} videos</p> -->
+<div ng-show="!sv.loading">
+	<div ng-repeat="path in sv.paths">
+	<p><b>{{path.path}}:</b> {{path.videos.length}}</p>
+</div>
+<div ng-repeat="path in sv.paths">
+<h4>{{path.path}}</h4>
+<p ng-show="path.videos.length">{{path.videos.length}} videos</p> 
+	<video-comp ng-repeat="(index,video) in path.videos" video="video"></video-comp>
+</div>
+</div>
+
+

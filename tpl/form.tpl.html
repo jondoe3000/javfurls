@@ -1,0 +1,27 @@
+<h1 class="text-center text-danger">Formulario <small>AngularJS</small></h1>
+
+
+<form name="formulario" novalidate ng-submit="fo.register(formulario.$valid)">
+    <fieldset>
+        <legend>Formulario de registro</legend>
+        <div class="row">
+            <div class="form-group">
+                <label for="email"></label>
+                <input type="email" name="email" class="form-control" placeholder="Ingrese email" required ng-model="fo.user.email" ng-minlength=5 ng-maxlength=10 />
+                <div ng-messages="formulario.email.$error" ng-show="formulario.email.$touched">
+                    <div ng-messages-include="messages/formulario.tpl.html"></div>
+                </div>
+            </div>
+             <div class="form-group">
+                <label for="name"></label>
+                <input type="text" name="name" class="form-control" placeholder="Ingrese nombre" required ng-model="fo.user.name" ng-minlength=5 ng-maxlength=10 />
+                <div ng-messages="formulario.name.$error" ng-show="formulario.name.$touched">
+                    <div ng-messages-include="messages/formulario.tpl.html"></div>
+                </div>
+            </div>
+          
+                <button ng-if="formulario.$valid" type="submit" class="btn btn-primary btn-raised btn-block" ng-disabled="formulario.$invalid">Send</button>
+                <button ng-if="formulario.$invalid" class="btn btn-primary btn-block btn-raised">Send</button>
+        </div>
+    </fieldset>
+</form>

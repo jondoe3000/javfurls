@@ -1,0 +1,26 @@
+
+
+<input type="number" min="1" ng-model="ts.number">
+<button class="btn btn-primary" ng-click="ts.buscar()">Buscar</button>
+<!-- <button class="btn btn-default" ng-click="ts.reload()">Reload</button> -->
+<button class="btn btn-default" ng-click="ts.loading=!ts.loading">Toggle</button>
+<!-- <button class="btn btn-default" ng-click="ts.loading=false">Show</button> -->
+<br>
+
+<h3>Top Stars</h3>
+
+<input type="text" name="" class="form-control" ng-model="ts.search" class="form-control">
+<center ng-show="ts.loading">
+	<img src="http://www.arabianbusiness.com/skins/ab.main/gfx/loading_spinner.gif">
+</center>
+
+<div class="row">
+	<div masonry reload-on-resize  reload-on-show ng-show="!ts.loading" preserve-order>
+
+		<div  class="masonry-brick col-sm-4 col-md-3" ng-repeat="(key, star) in ts.stars | filter:ts.search" >
+			<jf-star class="star" star="star"></jf-star> 
+			<!-- <jf-star class="star col-sm-4 col-md-3" star="star"></jf-star>  -->
+			<!-- <img ng-src="{{ star.imgs[0] }}" alt="A masonry brick"> -->
+		</div>
+	</div>
+</div

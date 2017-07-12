@@ -1,0 +1,50 @@
+  <div>
+  <div class="thumbnail" class="jf-star-inside">
+  <!-- {{star}} -->
+<!--     <div afkl-lazy-image="//placehold.it/480x480 480w, //placehold.it/768x768 768w, //placehold.it/936x936"
+    class="afkl-lazy-wrapper afkl-img-ratio-1-1 own-classname "></div> -->
+
+    <!-- <span afkl-lazy-image="{{$ctrl.img}} 100%, https://cdn-fd.com/v1/img/s-avatar.png" on-error="https://cdn-fd.com/v1/img/s-avatar.png"
+    class="afkl-lazy-wrapper afkl-img-ratio-1-1 own-classname imgStars"></span> -->
+<!--     <img class="imgStars" 
+        lazy-img="{{$ctrl.img}}" 
+        ng-src="{{'https://cdn-fd.com/v1/img/s-avatar.png'}}"
+        
+        alt="{{$ctrl.star.name}}"
+    > -->
+      <img class="imgStars" ng-src="{{$ctrl.img}}" on-error="https://cdn-fd.com/v1/img/s-avatar.png" alt="...">
+      <div class="caption" >
+        <h3>{{$ctrl.star.name}}</h3>
+        <p>
+        	<span ng-repeat="(key, url) in $ctrl.star.urls">
+        		<a target="_blank" ng-href="http://javfinder.com{{url}}">{{$ctrl.urlToPath(url)}}</a>
+        	</span>
+        	<span ng-repeat="(key, path) in $ctrl.star.paths">
+        		<a target="_blank" ng-href="http://javfinder.com{{$ctrl.pathToUrl(path)}}">{{path}}</a>
+        	</span>
+        </p>
+        <p>
+        	<a  ng-if="!$ctrl.selected"
+        		ng-click="$ctrl.selectStar($ctrl.star)" 
+        		class="btn btn-primary" 
+        		role="button"><i class="glyphicon glyphicon-plus"></i></a> 
+        	
+        	<a  ng-if="$ctrl.selected"
+        		ng-click="$ctrl.unSelectStar($ctrl.star)" 
+        		class="btn btn-warning" 
+        		role="button"><i class="glyphicon glyphicon-minus"></i></a> 
+
+            <a  
+            ng-if="$ctrl.selected"
+            ui-sref="starVideos({starName: $ctrl.star.name})"
+            class="btn btn-default" 
+            role="button"><i class="glyphicon glyphicon-heart"></i></a> 
+            <!-- glyphicon glyphicon-heart -->
+
+
+        	<!-- <a target="_blank" ng-href="http://javfinder.com{{$ctrl.star.urls[0]}}" class="btn btn-default" role="button">JavFinder</a> -->
+        </p>
+      </div>
+    </div>
+
+</div>

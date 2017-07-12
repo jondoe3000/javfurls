@@ -1,0 +1,41 @@
+
+<button class="btn btn-primary" ng-click="fs.buscar()">Buscar</button>
+<button class="btn btn-default" ng-click="fs.loading=!fs.loading">Toggle</button>
+<br>
+
+<h3>Favorite Stars</h3>
+
+<input type="text" name="" class="form-control" ng-model="fs.search" class="form-control">
+<!-- <center ng-show="fs.loading">
+	<img src="http://www.arabianbusiness.com/skins/ab.main/gfx/loading_spinner.gif">
+</center> -->
+<!-- <div class="row"> -->
+<!-- 
+<jf-star 
+	
+	ng-repeat="star in fs.stars | filter:fs.search" 
+	star="star">
+</jf-star> -->
+<!-- <div class="row">
+	<div masonry>
+		<div class="masonry-brick col-sm-4 col-md-3" ng-repeat="(key, star) in fs.stars | filter:fs.search" >
+			<jf-star class="star" star="star"></jf-star> 
+		</div>
+	</div>
+</div>
+ -->
+
+
+<!-- </div> -->
+
+
+<div class="row">
+	<div  masonry reload-on-resize  reload-on-show ng-show="!fs.loading" preserve-order>
+		<div class="masonry-brick col-sm-4 col-md-3" ng-repeat="(key, star) in fs.stars | filter:fs.search" >
+			<jf-star class="star" star="star"></jf-star> 
+			<!-- <jf-star class="star col-sm-4 col-md-3" star="star"></jf-star>  -->
+			<!-- <img ng-src="{{ star.imgs[0] }}" alt="A masonry brick"> -->
+		</div>
+	</div>
+</div
+

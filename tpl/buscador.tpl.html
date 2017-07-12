@@ -1,0 +1,20 @@
+
+
+<input type="number" min="1" ng-model="bu.number">
+<button class="btn btn-primary" ng-click="bu.buscar()">Buscar</button>
+<button class="btn btn-primary" ng-click="bu.showCarrito()">Carrito</button>
+<br>
+
+<h3>Top Stars</h3>
+
+<input type="text" name="" class="form-control" ng-model="bu.search" class="form-control">
+<center ng-show="bu.loading">
+	<img src="http://www.arabianbusiness.com/skins/ab.main/gfx/loading_spinner.gif">
+</center>
+<div class="row">
+
+<jf-star ng-repeat="(key, value) in bu.selectedStars | orderBy:'$index':true | filter:bu.search" star="value"  selected-stars="bu.selectedStars" ng-if="bu.carrito"></jf-star>
+
+<jf-star ng-repeat="(key, value) in bu.stars | filter:bu.search" star="value" select-star="bu.selectStar(value)" selected-stars="bu.selectedStars" ng-hide="bu.carrito"></jf-star>
+
+</div>

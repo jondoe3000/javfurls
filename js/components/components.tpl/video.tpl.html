@@ -1,0 +1,35 @@
+<div class="row">
+	<div class="col-xs-3 col-md-3" >
+		<div class="thumbnail">
+      		<img  lazy-img="{{$ctrl.video.img}}"  ng-src="{{$ctrl.imgLoading}}"  alt="...">
+      		<div class="caption">
+        		<h4><a target="_blank" ng-href="http://javfinder.com{{$ctrl.video.url}}">({{$ctrl.number}}) {{$ctrl.video.name}}</a></h4>
+        		<p>
+              <loading ng-show="$ctrl.loading"></loading>
+              <span ng-repeat="info in $ctrl.video.info | orderBy:'-'">
+                <b>{{info.label}}: </b> {{info.content}}<br/>
+              </span>
+             <!--  {{$ctrl.info}} -->
+           <!--    <b>path: </b>{{$ctrl.video.path}} <br/>
+              <b>id: </b>{{$ctrl.video.id}}  -->
+            </p>
+        		<p>
+             <a ng-click="$ctrl.select()" class="btn btn-primary" role="button" ng-show="!$ctrl.selected">
+                <i class="glyphicon glyphicon-plus-sign"></i>
+              </a>
+             <a  ng-click="$ctrl.unSelect()" class="btn btn-warning" role="button" ng-show="$ctrl.selected">
+                <i class="glyphicon glyphicon-minus-sign"></i>
+              </a>
+              <a class="btn btn-success" role="button" ng-click="$ctrl.getInfo()" ng-show="!$ctrl.video.info">Info</a> 
+            </p>
+      		</div>
+    	</div>
+	</div>
+  	<div class="col-xs-2 col-md-2" ng-repeat="thumb in $ctrl.thumbs">
+    	<a class="thumbnail">
+      		<img class="grow" lazy-img="{{thumb}}" ng-src="{{$ctrl.imgLoading}}" alt="...">
+    	</a>
+  	</div>
+	
+ 
+</div>

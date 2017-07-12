@@ -1,0 +1,19 @@
+<!-- pokemon -->
+<div>
+    <div class="page-header">
+        <h1>
+            {{pkmCtrl.pokemon.name}}
+            <small>{{pkmCtrl.pokemon.species}}</small>
+            <span class="label label-primary pull-right">#{{pkmCtrl.pokemon.id}}</span>
+          </h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <img class="avatar center-block" ng-src="img/pokemons/{{pkmCtrl.pokemon.name | lowercase}}.jpg">
+        </div>
+        <div ui-view="tabs"></div>
+
+    </div>
+    <div ui-view="comments"></div>
+</div>
+<!-- /pokemon -->

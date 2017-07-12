@@ -1,0 +1,8 @@
+<select ng-model="un.type">
+	<option value="">Last</option>
+	<option value="/hot">Hot</option>
+</select>
+<input type="number" name="" ng-model="un.number" min="1" >
+<button ng-click="un.cargar()" class="btn btn-primary">Cargar</button>
+
+<video-comp ng-repeat="video in un.videos | orderBy: '-' " video="video" number="un.videos.length-$index"></video-comp>
