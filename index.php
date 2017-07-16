@@ -76,7 +76,8 @@
 <script type="text/javascript" src="https://cdn-fd.com/player/token.js"></script>
 <!-- <script type="text/javascript" src="bower_components/crypto-js/crypto-js.js"></script> -->
 <!-- <script type="text/javascript" src="lib/Base64/base64.js"></script> -->
-<script src="js/no-ng/constants.js"></script>
+<!-- <script src="js/no-ng/constants.js"></script> -->
+<script src="js/no-ng/constants.php"></script>
 <script src="js/no-ng/functions.js"></script>
 
 <!-- MASONRY -->
