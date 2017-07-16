@@ -3,13 +3,14 @@ if( !($number=$_GET["number"])){
 
 	die("No number");
 }
+require("constants.php");
 require("../php/simple_html_dom.php");
 
 $stars=array();
 // $i=0;
 
 function urlstars($n){
-	return "https://javfinder.com/star/hot/page-".$n.".html";
+	return "$base_jf/star/hot/page-".$n.".html";
 }
 
 function getstars($url_stars){

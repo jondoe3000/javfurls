@@ -1,7 +1,8 @@
 angular.module('app.ctrl')
     .controller('busquedaCtrl', ['$http',"starsFact",function ($http,starsFact) {
         var vm = this;
-        var base="https://javfinder.com/";
+        //var base="https://javfinder.com/";
+        var base=base_jf+"/";
 
         vm.word="Satomi Suzuki";
         vm.number=5;

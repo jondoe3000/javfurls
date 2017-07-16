@@ -1,11 +1,13 @@
 <?php
 require("../php/simple_html_dom.php");
+require("constants.php");
 require("functions.php");
 $htmls=[];
 
 //Initialize
 //$base="https://www.javfinder.se/";
-$base="https://www.javfinder.com/";
+//$base="https://www.javfinder.to/";
+$base=$base_jf."/";
 //stream/v0/
 $base_slug=$base."stream/sw0/";
 

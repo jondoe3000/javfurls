@@ -17,7 +17,8 @@ angular.module('app.ctrl')
                 })
             }
             
-            var base="https://javfinder.com/";
+            //var base="https://javfinder.com/";
+        var base=base_jf+"/";
              // https://javfinder.com/star/satomi-suzuki/movie/hot.html
             
 

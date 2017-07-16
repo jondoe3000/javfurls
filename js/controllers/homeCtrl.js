@@ -87,6 +87,7 @@ angular.module('app.ctrl')
                             url:nameToUrl(success[i].name),
                            date:date
                         }
+                        console.log(_success);
                         //ref.child("success").child("");
                         //var existe=($firebaseObject(ref.child("success").child(success[i].name)));
                         //var existe=($firebaseObject(ref.child("succesus").child(success[i].name)));
@@ -117,6 +118,7 @@ angular.module('app.ctrl')
                         urls.push(urlFormat);
                       }
 
+                        console.log(urls);
                         //console.log(success[0].files);
                         
                         //console.log(urlDecrypted);

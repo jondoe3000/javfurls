@@ -1,7 +1,8 @@
 angular.module('app.ctrl')
     .controller('favStarsCtrl', ["starsFact",function (starsFact) {
     	var vm=this;
-    	 var base="https://javfinder.com/";
+    	//var base="https://javfinder.com/";
+        var base=base_jf+"/";
         vm.stars=starsFact.getFavStarsFromMemory();
         vm.buscar=function(){
             vm.loading=true;

@@ -3,10 +3,14 @@ if( !($path=$_GET["path"])){
 
 	die("No path");
 }
+require("constants.php");
+// $path=str_replace("https://javfinder.com/", "", $path);
+// $path=str_replace("http://javfinder.com/", "", $path);
+// $base="https://javfinder.com/";
 
-$path=str_replace("https://javfinder.com/", "", $path);
-$path=str_replace("http://javfinder.com/", "", $path);
-$base="https://javfinder.com/";
+$path=str_replace("$base_jf/", "", $path);
+$path=str_replace("$base_jf/", "", $path);
+$base="$base_jf/";
 
 /*
 

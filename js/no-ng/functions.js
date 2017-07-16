@@ -126,7 +126,7 @@ function inArray(arr,item){
 }
 
 function nameToUrl(name){
-    return "https://javfinder.com/movie/watch/"+name+".html";
+    return base_jf+"/movie/watch/"+name+".html";
 }
 
 //IMG

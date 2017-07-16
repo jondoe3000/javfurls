@@ -1,9 +1,10 @@
 <?php
+require("constants.php");
 require("../php/simple_html_dom.php");
 $categories=array();
 
 function urlCategories($n){
-	return "https://javfinder.com/category/page-".$n.".html";
+	return "$base_jf/category/page-".$n.".html";
 }
 
 function getCategories($url_categories){

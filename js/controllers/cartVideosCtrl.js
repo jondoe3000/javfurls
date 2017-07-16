@@ -1,7 +1,8 @@
 angular.module('app.ctrl')
     .controller('cartVideosCtrl', ["videosFact",function (videosFact) {
     	var vm=this;
-    	 var base="https://javfinder.com/";
+    	 //var base="https://javfinder.com/";
+        var base=base_jf+"/";
 
 		vm.videos=videosFact.getSelected();
 		vm.unSelectAll=function(){

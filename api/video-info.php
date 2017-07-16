@@ -3,8 +3,9 @@ if( !($name=$_GET["name"])){
 
 	die("No name");
 }
-
-$base="https://www.javfinder.com/";
+require("constants.php");
+$base="$base_jf/";
+//$base="https://www.javfinder.com/";
 require("../php/simple_html_dom.php");
 require("functions.php");
 

@@ -1,0 +1,1 @@
+var base_jf="https://javfinder.to";
