@@ -5,4 +5,5 @@
 <input type="number" name="" ng-model="un.number" min="1" >
 <button ng-click="un.cargar()" class="btn btn-primary">Cargar</button>
 
+<loading ng-show="un.loading"></loading>
 <video-comp ng-repeat="video in un.videos | orderBy: '-' " video="video" number="un.videos.length-$index"></video-comp>

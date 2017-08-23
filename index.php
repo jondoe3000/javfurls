@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>JavF URLs</title>
     <base href="/">
-    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css"> -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="https://bootswatch.com/cerulean/bootstrap.min.css">
     <!--<link rel=" stylesheet " href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css ">-->

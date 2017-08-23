@@ -10,9 +10,10 @@
 <h3>Top Stars</h3>
 
 <input type="text" name="" class="form-control" ng-model="ts.search" class="form-control">
-<center ng-show="ts.loading">
-	<img src="http://www.arabianbusiness.com/skins/ab.main/gfx/loading_spinner.gif">
-</center>
+<!-- <center > -->
+	<!-- <img src="http://www.arabianbusiness.com/skins/ab.main/gfx/loading_spinner.gif"> -->
+	<loading ng-show="ts.loading"></loading>
+<!-- </center> -->
 
 <div class="row">
 	<div masonry reload-on-resize  reload-on-show ng-show="!ts.loading" preserve-order>

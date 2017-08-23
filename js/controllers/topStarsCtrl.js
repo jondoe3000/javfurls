@@ -23,6 +23,7 @@ angular.module('app.ctrl')
         		vm.stars=data;
                 starsFact.setTopStars(data);
         		vm.loading=false;
+                console.log(vm.stars);
         	},function(){
         		vm.loading=false;
         	})

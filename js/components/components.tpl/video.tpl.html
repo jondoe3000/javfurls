@@ -3,7 +3,7 @@
 		<div class="thumbnail">
       		<img  lazy-img="{{$ctrl.video.img}}"  ng-src="{{$ctrl.imgLoading}}"  alt="...">
       		<div class="caption">
-        		<h4><a target="_blank" ng-href="http://javfinder.com{{$ctrl.video.url}}">({{$ctrl.number}}) {{$ctrl.video.name}}</a></h4>
+        		<h4><a target="_blank" ng-href="{{$ctrl.video.completeUrl}}">({{$ctrl.number}}) {{$ctrl.video.name}}</a></h4>
         		<p>
               <loading ng-show="$ctrl.loading"></loading>
               <span ng-repeat="info in $ctrl.video.info | orderBy:'-'">

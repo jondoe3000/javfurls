@@ -46,9 +46,11 @@ angular.module('app.com', [])
             var vm = this;
             vm.thumbs=[];
 
+
             var imgLoadings=[
             'http://i.imgur.com/XUWm0Dh.jpg',
-            "https://lh3.googleusercontent.com/proxy/kdL928p-qmWqv68BxMyNxjYFg_tqZA0G1zAzdoICjA7aE422BD-y0lOyFl7D1dEN_qLGdyJUmZb926skS9P79Sl5cjy3=w400-h300-p"
+            "http://i.imgur.com/9Byc4ha.gif"
+           // "https://lh3.googleusercontent.com/proxy/kdL928p-qmWqv68BxMyNxjYFg_tqZA0G1zAzdoICjA7aE422BD-y0lOyFl7D1dEN_qLGdyJUmZb926skS9P79Sl5cjy3=w400-h300-p"
             ];
 
             vm.imgLoading=imgLoadings[1];
@@ -86,6 +88,7 @@ angular.module('app.com', [])
               }
 
               vm.selected=videosFact.isSelected(vm.video);
+              vm.video.completeUrl=base_jf+vm.video.url;
             }
           
         }],

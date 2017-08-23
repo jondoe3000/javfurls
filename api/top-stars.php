@@ -10,6 +10,7 @@ $stars=array();
 // $i=0;
 
 function urlstars($n){
+	global $base_jf;
 	return "$base_jf/star/hot/page-".$n.".html";
 }
 
